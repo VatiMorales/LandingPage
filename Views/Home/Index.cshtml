@@ -1,0 +1,159 @@
+﻿@model VeterinariaVanesaMorales.Models.Contacto
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<div class="form-horizontal">
+    <h1 id="bien" style="font-size:3em">¡Bienvenido!</h1>
+    <div style="background-image: url(https://png.pngtree.com/thumb_back/fw800/back_our/20190621/ourmid/pngtree-pet-supplies-promotion-banner-poster-image_195124.jpg);width:1100px;height:300px;">
+        <h1 style="color:gray;padding:75px;margin-left:40px;font-size:3.5em">Veterinaria Huellas</h1>
+    </div>
+
+    <div id="nav">
+        <ul>
+            <li><h1><a href="#">Servicios</a></h1></li>
+            <li><h1><a href="#">Productos</a></h1></li>
+            <li><h1><a href="#">Guardería</a></h1></li>
+            <li><h1><a href="#">Promociones</a></h1></li>
+            <li><h1>@Html.ActionLink("Visualizar Mensajes", "Visualizar")</h1></li>
+
+
+
+        </ul>
+
+
+
+
+    </div>
+    <section class="bg-light text-center" style="background:gray;width:1100px">
+
+        <div class="container" style="padding:2px;">
+            <div class="row">
+                <div class="m-5">
+                    <h1 style="color:gray;text-align:center;margin-top:20px">¿Porque Escogernos para cuidar de tu amigo?</h1>
+                    <img src="https://static.affinity-petcare.com/advance/cdn/farfuture/BW1cQVrI0a8_WC2lsQk-YhKcOifgARSDnNB7LveE2uA/drupal-cache:qq2ggy/sites/default/files/como-hacer-que-un-gato-acepte-a-un-perro-2_0.jpg" style="width:900px;height:400px;padding:20px" />
+                    <h2 style="color:gray;text-align:center">
+                        La veterinaria Huellas sabe que su mascota es lo más importante para ti, y por ello nos esforzamos por dar el mejor servicio y cuidado de tu amigo canino o gatuno.
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <table style="margin-top:25px">
+        <tr>
+            <td>
+                <div style="background:#58D68D ;opacity: 0.9;">
+                    <img src="https://fotos01.superdeporte.es/mmp/2017/04/05/690x278/convivir-perros-gatos2.jpg" style="width:300px; height:300px;border-radius:100px" />
+                </div>
+
+            </td>
+            <td>
+                <div style="background:#34495E ;opacity: 0.9;">
+                    <img src="https://cdn.wamiz.es/media/cache/upload_16by9_1200/uploads/article/main-picture/5ea041d97ad6e856370722.jpg" style="width:300px; height:300px;border-radius:100px" />
+                </div>
+            </td>
+            <td>
+                <div style="background:#58D68D ;opacity: 0.9;">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/71J1zbug7fL._AC_SL1500_.jpg" style="width:300px; height:300px;border-radius:100px" />
+                </div>
+            </td>
+            <td>
+                <div style="background:#34495E ;opacity: 0.9;">
+
+                    <img src="https://www.vivepalmira.com/wp-content/uploads/2019/05/vete.jpg" style="width:300px; height:300px;border-radius:100px" />
+                </div>
+            </td>
+
+        </tr>
+        <tr>
+            <td><h2 style="background:#58D68D ;text-align:center;padding:15px;opacity: 0.8;color:white">Ayuda para tus cachorros</h2></td>
+            <td><h2 style="background:#34495E ;text-align:center;padding:15px;opacity: 0.8;color:white">Limpieza de tus amigos</h2></td>
+            <td><h2 style="background:#58D68D ;text-align:center;padding:15px;opacity: 0.8;color:white">Boutique</h2></td>
+            <td><h2 style="background:#34495E ;text-align:center;padding:15px;opacity: 0.8;color:white">Clinica</h2></td>
+
+        </tr>
+
+
+
+    </table>
+
+    <section class="page-section" id="contact">
+        <img src="https://t1.fr.ltmcdn.com/es/posts/8/0/1/dame_una_caricia_y_te_seguire_hasta_el_fin_del_mundo_108_99_600.jpg" style="float: right;" />
+        <img src="https://www.lifeder.com/wp-content/uploads/2018/05/gatos-lifeder-1.jpg" style="float: right;"/>
+        <div class="container">
+
+            <div style="background:white;opacity:0.8;padding:15px;width:400px">
+
+
+                <h3 style="text-align:center">Contacto</h3>
+
+                <div><img src="https://thumbs.dreamstime.com/b/perro-en-el-tel%C3%A9fono-82069282.jpg" style="width:140px;border-radius:100px;margin-left:100px" /></div>
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Direccion, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Direccion, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Direccion, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Telefono, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Telefono, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Telefono, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Ciudad, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Ciudad, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Ciudad, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Mensaje, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Mensaje, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Mensaje, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Enviar" class="btn btn-success" />
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+</div>
+
+}
+
