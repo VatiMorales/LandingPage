@@ -1,3 +1,5 @@
+BASE DE DATOS
+
 create database Veterinaria;
 use Veterinaria
 CREATE TABLE contacto(
